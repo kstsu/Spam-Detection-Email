@@ -17,10 +17,10 @@ Final group project for a Machine Learning course: an end-to-end, **traditional*
 | **Algorithms** | **Exactly three** traditional algorithms, compared under identical conditions (proposed: Random Forest, Logistic Regression, Naive Bayes; final choice in `documentation/DECISIONS.md`) |
 | **Not allowed** | Neural networks, deep learning, transformers, LLMs, pretrained models, AutoML |
 | **Split / validation** | 80/20 stratified train/test; 5-fold stratified CV on the training set only; test set used **once** |
-| **Primary metric** | To be chosen and justified in M1 (candidates in `documentation/DECISIONS.md`) |
+| **Primary metric** | Spam-class F1: balances catching spam with avoiding false positives |
 | **Deployment** | Streamlit app with a public URL, plus local run instructions |
 | **Stack** | Python 3.11+, pandas, scikit-learn, matplotlib/seaborn, joblib, Streamlit |
-| **Status** | Milestone 0: repository bootstrap |
+| **Status** | Core training pipeline, EDA generator, final evaluation, and local app implemented |
 
 **AI assistants:** read `CLAUDE.md` first, then `documentation/PROJECT_REQUIREMENTS.md` (the course rules in checklist form) and `documentation/DECISIONS.md` (what is decided and what is still open).
 
@@ -241,11 +241,16 @@ python -m venv .venv
 source .venv/bin/activate          # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 
-jupyter lab                        # start with notebooks/01_eda.ipynb
-streamlit run app/streamlit_app.py # available after Milestone 6
+$env:PYTHONPATH = "src"             # PowerShell; use `export PYTHONPATH=src` on macOS/Linux
+python -m spam_detection.eda       # writes five figures and EDA findings
+python -m spam_detection.train     # compares exactly three models and saves the winner
+python -m spam_detection.final_evaluation
+streamlit run app/streamlit_app.py
 ```
 
-Troubleshooting notes (to be extended as we hit problems): if `streamlit` is not found, confirm the virtual environment is activated; if the model fails to load, check that the scikit-learn version matches the one in `requirements.txt`.
+The training command uses the cleaned data, a stratified 80/20 split, and 5-fold CV on training data only. It saves the selected pipeline to `models/spam_detector.joblib`; validation metadata goes to `models/training_metadata.json`, and the one-time held-out test result goes to `models/final_test_metrics.json`. The app accepts pasted text or a CSV containing all 57 feature columns.
+
+Troubleshooting: if `streamlit` or `pytest` is not found, activate the virtual environment and rerun `python -m pip install -r requirements.txt`; if the model fails to load, retrain it from the repository root.
 
 ---
 

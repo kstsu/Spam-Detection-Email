@@ -10,6 +10,10 @@ Record every project decision here with the reason. AI assistants: check this fi
 | Dataset | UCI Spambase | Public, well known, fits the research question |
 | Split | 80/20 stratified, 5-fold stratified CV on training data | Course requirement |
 | Language and app framework | Python, Streamlit | Course requirement / preferred |
+| Algorithms | Logistic Regression, Gaussian Naive Bayes, Random Forest | Exactly three permitted traditional algorithms; linear, probabilistic and tree-based inductive biases are compared |
+| Primary metric | Spam-class F1 | Balances catching spam with avoiding false positives; accuracy alone hides the cost of the class imbalance |
+| Duplicate policy | Remove exact duplicate rows before splitting; retain the first row and report conflicting-label groups | Prevents repeated records crossing train/test while preserving an auditable, deterministic policy |
+| App input | Pasted text and 57-column CSV | Text is practical for users; CSV permits exact feature-level reproduction |
 
 ## OPEN (decide in M1)
 
