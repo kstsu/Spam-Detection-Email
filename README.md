@@ -148,7 +148,7 @@ Both paths are validated (empty, wrong columns, negative or out-of-range values 
 
 ## Roadmap
 
-Dates depend on the course deadline (not stated in the requirements; add it here once known: **Due: TBD**).
+Dates depend on the course deadline (not stated in the requirements; **Due: [PLACEHOLDER]**).
 
 ### Short term: deliver the course project
 
@@ -176,7 +176,7 @@ Dates depend on the course deadline (not stated in the requirements; add it here
 
 | # | Deliverable | Location |
 |---|---|---|
-| 1 | Deployable application (URL + local) | `app/` and the deployed URL: **TBD** |
+| 1 | Deployable application (URL + local) | `app/` and the deployed URL: **[PLACEHOLDER]** |
 | 2 | Source code, saved model, requirements | `src/`, `notebooks/`, `models/`, `requirements.txt`; repo link + ZIP |
 | 3 | Technical documentation | this README, `documentation/` (PDF or DOCX for submission) |
 | 4 | Dataset package | `data/original/`, `data/processed/`, `documentation/DATA_DICTIONARY.md`, `data/original/SOURCE.md` |
@@ -258,8 +258,8 @@ Troubleshooting: if `streamlit` or `pytest` is not found, activate the virtual e
 
 | Member | Role / responsibility | Notes |
 |---|---|---|
-| TBD | TBD | |
-| TBD | TBD | |
+| [PLACEHOLDER] | [PLACEHOLDER] | |
+| [PLACEHOLDER] | [PLACEHOLDER] | |
 
 The full contribution record, confirmed by all members, lives in `documentation/CONTRIBUTIONS.md`.
 
@@ -279,4 +279,4 @@ The full contribution record, confirmed by all members, lives in `documentation/
 - **Dataset:** Hopkins, M., Reeber, E., Forman, G., Suermondt, J. (1999). *Spambase*. UCI Machine Learning Repository.
 - **Course:** Final Group Project Requirements, Traditional Machine Learning Model and Deployable Application.
 - **Ownership and authorship:** governed by the signed declaration and university policy.
-- **License:** TBD. Confirm with the group and the instructor before adding a `LICENSE` file.
+- **License:** [PLACEHOLDER]. Confirm with the group and the instructor before adding a `LICENSE` file.

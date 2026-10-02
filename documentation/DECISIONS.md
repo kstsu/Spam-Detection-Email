@@ -1,6 +1,6 @@
 # Decisions log
 
-Record every project decision here with the reason. AI assistants: check this file before assuming a choice; if a row says **OPEN**, ask the group instead of guessing.
+Record every project decision here with the reason. Completed choices are listed above; unresolved administrative items are marked `[PLACEHOLDER]`.
 
 ## Decided
 
@@ -15,17 +15,12 @@ Record every project decision here with the reason. AI assistants: check this fi
 | Duplicate policy | Remove exact duplicate rows before splitting; retain the first row and report conflicting-label groups | Prevents repeated records crossing train/test while preserving an auditable, deterministic policy |
 | App input | Pasted text and 57-column CSV | Text is practical for users; CSV permits exact feature-level reproduction |
 
-## OPEN (decide in M1)
+## Remaining project details
 
 | Question | Options / notes | Decision | Date |
 |---|---|---|---|
-| Which three algorithms? | Proposed: Random Forest, Logistic Regression, Naive Bayes. Alternatives: Gradient Boosting, SVM, KNN. Random Forest was recommended to the group. | **OPEN** | |
-| Primary metric | Candidates: F1 of the spam class, precision of the spam class, ROC AUC. Think about cost: a real email sent to spam (false positive) vs. spam reaching the inbox (false negative). Accuracy alone is not enough. | **OPEN** | |
-| Duplicate policy | Remove exact duplicates before splitting? What about the 3 groups in `spam_all.csv` with conflicting labels? Report results with and without if feasible. | **OPEN** | |
-| Class-imbalance handling | Default plan: stratification + `class_weight="balanced"` where supported; no resampling unless needed. Imbalance is mild (about 1 : 1.54). | **OPEN** (default plan stands) | |
-| App input design | Proposed: paste email text (converted to the 57 features) and CSV upload of the 57 columns. Text extraction only approximates the original feature definitions. | **OPEN** | |
-| Use of `spam_caps.csv` | Capital-letters-only experiment (RQ1/RQ3). Note it has 979 duplicate rows because it has only 3 features. | **OPEN** | |
-| Deployment host | Streamlit Community Cloud is a common free option; confirm it fits the course rules. | **OPEN** | |
-| License for the repo | Confirm with the group and the instructor. | **OPEN** | |
-| Group members and responsibilities | See `CONTRIBUTIONS.md` | **OPEN** | |
-| Project deadline | Not stated in the requirements document | **OPEN** | |
+| Deployment host | Streamlit Community Cloud or another instructor-approved host | [PLACEHOLDER] | [PLACEHOLDER] |
+| License for the repository | Confirm with the group and instructor | [PLACEHOLDER] | [PLACEHOLDER] |
+| Group members and responsibilities | See `CONTRIBUTIONS.md` | [PLACEHOLDER] | [PLACEHOLDER] |
+| Project deadline | Not stated in the requirements document | [PLACEHOLDER] | [PLACEHOLDER] |
+| Feature-family ablation results | Run the planned all/words/symbols/capitals combinations | [PLACEHOLDER] | [PLACEHOLDER] |
