@@ -1,0 +1,11 @@
+# Core stack. Before submission, pin EXACT versions (pip freeze) and re-test in a clean environment.
+pandas
+numpy
+scikit-learn
+matplotlib
+seaborn
+joblib
+streamlit
+jupyterlab
+pytest
+ruff
