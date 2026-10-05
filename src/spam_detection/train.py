@@ -8,11 +8,64 @@ import joblib
 import pandas as pd
 from sklearn.model_selection import GridSearchCV, StratifiedKFold
 
-from .config import CV_FOLDS, MODELS_DIR, RANDOM_STATE, feature_columns
+from .config import (
+    CV_FOLDS,
+    MODELS_DIR,
+    RANDOM_STATE,
+    feature_columns,
+)
 from .data import load_dataset, remove_duplicate_rows, split_dataset
 from .pipeline import MODEL_NAMES, build_pipeline
 
 PRIMARY_METRIC = "f1"
+
+
+def run_feature_ablation(
+    train_features: pd.DataFrame, train_labels: pd.Series
+) -> dict[str, dict[str, float | int]]:
+    """Measure feature-family performance using training-only CV.
+
+    The same selected Random Forest configuration and CV splitter are used for
+    every feature subset, so the experiment changes features rather than the
+    algorithm or validation design.
+    """
+    folds = StratifiedKFold(n_splits=CV_FOLDS, shuffle=True, random_state=RANDOM_STATE)
+    groups = {
+        "all": feature_columns(train_features.columns.tolist()),
+        "words": feature_columns(train_features.columns.tolist(), "words"),
+        "symbols": feature_columns(train_features.columns.tolist(), "symbols"),
+        "capitals": feature_columns(train_features.columns.tolist(), "capitals"),
+        "words_symbols": feature_columns(
+            train_features.columns.tolist(), "words"
+        )
+        + feature_columns(train_features.columns.tolist(), "symbols"),
+        "words_capitals": feature_columns(
+            train_features.columns.tolist(), "words"
+        )
+        + feature_columns(train_features.columns.tolist(), "capitals"),
+    }
+    results: dict[str, dict[str, float | int]] = {}
+    for group_name, columns in groups.items():
+        search = GridSearchCV(
+            build_pipeline("random_forest"),
+            {
+                "model__max_features": ["sqrt"],
+                "model__min_samples_leaf": [1],
+            },
+            scoring=PRIMARY_METRIC,
+            cv=folds,
+            n_jobs=-1,
+            return_train_score=False,
+        )
+        search.fit(train_features[columns], train_labels)
+        results[group_name] = {
+            "feature_count": len(columns),
+            "cv_f1_mean": float(search.best_score_),
+            "cv_f1_std": float(
+                search.cv_results_["std_test_score"][search.best_index_]
+            ),
+        }
+    return results
 
 
 def compare_models(
@@ -57,6 +110,7 @@ def train_and_save(output_dir: Path = MODELS_DIR) -> dict:
     cleaned, report = remove_duplicate_rows(frame)
     train_x, test_x, train_y, test_y = split_dataset(cleaned)
     results, selected = compare_models(train_x, train_y)
+    ablation = run_feature_ablation(train_x, train_y)
     final_model = results[selected]["estimator"]
     output_dir.mkdir(parents=True, exist_ok=True)
     joblib.dump(final_model, output_dir / "spam_detector.joblib")
@@ -73,6 +127,7 @@ def train_and_save(output_dir: Path = MODELS_DIR) -> dict:
         "train_class_counts": train_y.value_counts().to_dict(),
         "test_class_counts": test_y.value_counts().to_dict(),
         "comparison": serializable,
+        "feature_ablation": ablation,
         "feature_columns": feature_columns(frame.columns.tolist()),
     }
     (output_dir / "training_metadata.json").write_text(

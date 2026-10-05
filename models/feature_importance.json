@@ -1,0 +1,309 @@
+{
+  "metric": "spam_f1",
+  "repeats": 10,
+  "baseline_f1": 0.9317507418397626,
+  "individual": [
+    {
+      "feature": "word_freq_remove",
+      "mean_f1_decrease": 0.03540785128955624,
+      "std_f1_decrease": 0.005327522606368649
+    },
+    {
+      "feature": "word_freq_hp",
+      "mean_f1_decrease": 0.02702793646532593,
+      "std_f1_decrease": 0.007730419628955646
+    },
+    {
+      "feature": "char_freq_!",
+      "mean_f1_decrease": 0.013755915230849425,
+      "std_f1_decrease": 0.00591779220153228
+    },
+    {
+      "feature": "word_freq_george",
+      "mean_f1_decrease": 0.010294452734786918,
+      "std_f1_decrease": 0.004517929592537273
+    },
+    {
+      "feature": "word_freq_our",
+      "mean_f1_decrease": 0.009316403862202737,
+      "std_f1_decrease": 0.002696436829993348
+    },
+    {
+      "feature": "word_freq_edu",
+      "mean_f1_decrease": 0.008951510982928845,
+      "std_f1_decrease": 0.004450189342356476
+    },
+    {
+      "feature": "char_freq_$",
+      "mean_f1_decrease": 0.008537968963122889,
+      "std_f1_decrease": 0.003253728126843569
+    },
+    {
+      "feature": "word_freq_you",
+      "mean_f1_decrease": 0.008401920596916412,
+      "std_f1_decrease": 0.0021474235225032168
+    },
+    {
+      "feature": "word_freq_free",
+      "mean_f1_decrease": 0.00825537182570758,
+      "std_f1_decrease": 0.004966528996381572
+    },
+    {
+      "feature": "word_freq_meeting",
+      "mean_f1_decrease": 0.0062630429736819536,
+      "std_f1_decrease": 0.0013578975144104318
+    },
+    {
+      "feature": "word_freq_1999",
+      "mean_f1_decrease": 0.005855513216490249,
+      "std_f1_decrease": 0.0021462648414091166
+    },
+    {
+      "feature": "capital_run_length_longest",
+      "mean_f1_decrease": 0.005214075086951253,
+      "std_f1_decrease": 0.005107699013480603
+    },
+    {
+      "feature": "word_freq_000",
+      "mean_f1_decrease": 0.004843896673003811,
+      "std_f1_decrease": 0.003326412308027885
+    },
+    {
+      "feature": "capital_run_length_average",
+      "mean_f1_decrease": 0.004250494649381653,
+      "std_f1_decrease": 0.002824253570825762
+    },
+    {
+      "feature": "word_freq_re",
+      "mean_f1_decrease": 0.003817671649454657,
+      "std_f1_decrease": 0.002331756050846376
+    },
+    {
+      "feature": "char_freq_#",
+      "mean_f1_decrease": 0.0023743895570386363,
+      "std_f1_decrease": 0.0012150822776063489
+    },
+    {
+      "feature": "word_freq_your",
+      "mean_f1_decrease": 0.002317061924754382,
+      "std_f1_decrease": 0.0029921701988754696
+    },
+    {
+      "feature": "word_freq_will",
+      "mean_f1_decrease": 0.0023102365882064157,
+      "std_f1_decrease": 0.0014688833950138864
+    },
+    {
+      "feature": "word_freq_650",
+      "mean_f1_decrease": 0.0020436732768247534,
+      "std_f1_decrease": 0.0009634892139067141
+    },
+    {
+      "feature": "word_freq_make",
+      "mean_f1_decrease": 0.0019075900731126306,
+      "std_f1_decrease": 0.0015589908619899713
+    },
+    {
+      "feature": "word_freq_labs",
+      "mean_f1_decrease": 0.001747915796040278,
+      "std_f1_decrease": 0.0013222660195526354
+    },
+    {
+      "feature": "word_freq_internet",
+      "mean_f1_decrease": 0.0016765038894811068,
+      "std_f1_decrease": 0.001712506012509773
+    },
+    {
+      "feature": "word_freq_business",
+      "mean_f1_decrease": 0.0016563736833964727,
+      "std_f1_decrease": 0.0019714152423795615
+    },
+    {
+      "feature": "char_freq_;",
+      "mean_f1_decrease": 0.001559354145497227,
+      "std_f1_decrease": 0.0007772124249749964
+    },
+    {
+      "feature": "word_freq_all",
+      "mean_f1_decrease": 0.0015463516731411997,
+      "std_f1_decrease": 0.0009748929977934727
+    },
+    {
+      "feature": "word_freq_address",
+      "mean_f1_decrease": 0.0014078421170982125,
+      "std_f1_decrease": 0.0008137293312622129
+    },
+    {
+      "feature": "word_freq_receive",
+      "mean_f1_decrease": 0.0013871498051726161,
+      "std_f1_decrease": 0.0008115308974263536
+    },
+    {
+      "feature": "capital_run_length_total",
+      "mean_f1_decrease": 0.0013133905253502442,
+      "std_f1_decrease": 0.0019568876032493316
+    },
+    {
+      "feature": "word_freq_85",
+      "mean_f1_decrease": 0.0009939469238228749,
+      "std_f1_decrease": 0.0012428659111140973
+    },
+    {
+      "feature": "char_freq_(",
+      "mean_f1_decrease": 0.000793953307039108,
+      "std_f1_decrease": 0.001819330152726764
+    },
+    {
+      "feature": "word_freq_people",
+      "mean_f1_decrease": 0.0006556723420846344,
+      "std_f1_decrease": 0.0012362948748660964
+    },
+    {
+      "feature": "word_freq_money",
+      "mean_f1_decrease": 0.00036903143258425474,
+      "std_f1_decrease": 0.00198600525883342
+    },
+    {
+      "feature": "word_freq_lab",
+      "mean_f1_decrease": 0.00035802311277284283,
+      "std_f1_decrease": 0.0011238213970373835
+    },
+    {
+      "feature": "char_freq_[",
+      "mean_f1_decrease": 0.0003179313268333983,
+      "std_f1_decrease": 0.000953793980500195
+    },
+    {
+      "feature": "word_freq_credit",
+      "mean_f1_decrease": 0.00025544389753473506,
+      "std_f1_decrease": 0.0010656769783017933
+    },
+    {
+      "feature": "word_freq_project",
+      "mean_f1_decrease": 0.00017901155638642142,
+      "std_f1_decrease": 0.0008145749833744081
+    },
+    {
+      "feature": "word_freq_pm",
+      "mean_f1_decrease": 0.00015872945886481472,
+      "std_f1_decrease": 0.00047618837659444416
+    },
+    {
+      "feature": "word_freq_font",
+      "mean_f1_decrease": 0.00013803714693921831,
+      "std_f1_decrease": 0.000414111440817655
+    },
+    {
+      "feature": "word_freq_hpl",
+      "mean_f1_decrease": 0.00010836487636008973,
+      "std_f1_decrease": 0.003160203980765859
+    },
+    {
+      "feature": "word_freq_email",
+      "mean_f1_decrease": 8.519979231250697e-05,
+      "std_f1_decrease": 0.0008298214732563828
+    },
+    {
+      "feature": "word_freq_cs",
+      "mean_f1_decrease": 4.059437673595845e-05,
+      "std_f1_decrease": 0.0006679110069390787
+    },
+    {
+      "feature": "word_freq_conference",
+      "mean_f1_decrease": 4.0564195043213405e-05,
+      "std_f1_decrease": 0.0009410679069911854
+    },
+    {
+      "feature": "word_freq_telnet",
+      "mean_f1_decrease": 2.0282097521606703e-05,
+      "std_f1_decrease": 0.000665744520266041
+    },
+    {
+      "feature": "word_freq_data",
+      "mean_f1_decrease": 2.0282097521606703e-05,
+      "std_f1_decrease": 0.0006657445202660411
+    },
+    {
+      "feature": "word_freq_3d",
+      "mean_f1_decrease": 0.0,
+      "std_f1_decrease": 0.0
+    },
+    {
+      "feature": "word_freq_report",
+      "mean_f1_decrease": 0.0,
+      "std_f1_decrease": 0.0
+    },
+    {
+      "feature": "word_freq_857",
+      "mean_f1_decrease": 0.0,
+      "std_f1_decrease": 0.0
+    },
+    {
+      "feature": "word_freq_415",
+      "mean_f1_decrease": 0.0,
+      "std_f1_decrease": 0.0
+    },
+    {
+      "feature": "word_freq_parts",
+      "mean_f1_decrease": 0.0,
+      "std_f1_decrease": 0.0
+    },
+    {
+      "feature": "word_freq_table",
+      "mean_f1_decrease": 0.0,
+      "std_f1_decrease": 0.0
+    },
+    {
+      "feature": "word_freq_original",
+      "mean_f1_decrease": -0.000138447361343208,
+      "std_f1_decrease": 0.000415342084029624
+    },
+    {
+      "feature": "word_freq_order",
+      "mean_f1_decrease": -0.0001582591493570762,
+      "std_f1_decrease": 0.0004747774480712286
+    },
+    {
+      "feature": "word_freq_over",
+      "mean_f1_decrease": -0.00017848115177493407,
+      "std_f1_decrease": 0.0008121614278681261
+    },
+    {
+      "feature": "word_freq_addresses",
+      "mean_f1_decrease": -0.0003165182987141524,
+      "std_f1_decrease": 0.0006330365974283049
+    },
+    {
+      "feature": "word_freq_direct",
+      "mean_f1_decrease": -0.00047477744807122857,
+      "std_f1_decrease": 0.0007252345313481235
+    },
+    {
+      "feature": "word_freq_mail",
+      "mean_f1_decrease": -0.0008119274437466851,
+      "std_f1_decrease": 0.0011906947036671803
+    },
+    {
+      "feature": "word_freq_technology",
+      "mean_f1_decrease": -0.0017402346681142044,
+      "std_f1_decrease": 0.0011484039796067812
+    }
+  ],
+  "grouped": [
+    {
+      "feature_group": "words",
+      "mean_f1_decrease": 0.3968670209095301,
+      "permuted_f1": 0.5348837209302325
+    },
+    {
+      "feature_group": "capitals",
+      "mean_f1_decrease": 0.07707448284695684,
+      "permuted_f1": 0.8546762589928057
+    },
+    {
+      "feature_group": "symbols",
+      "mean_f1_decrease": 0.04741692046348145,
+      "permuted_f1": 0.8843338213762811
+    }
+  ]
+}

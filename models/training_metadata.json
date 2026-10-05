@@ -41,6 +41,38 @@
       "cv_f1_std": 0.016333531474627627
     }
   },
+  "feature_ablation": {
+    "all": {
+      "feature_count": 57,
+      "cv_f1_mean": 0.9345334440394495,
+      "cv_f1_std": 0.016333531474627627
+    },
+    "words": {
+      "feature_count": 48,
+      "cv_f1_mean": 0.9138148844737435,
+      "cv_f1_std": 0.01788691833990183
+    },
+    "symbols": {
+      "feature_count": 6,
+      "cv_f1_mean": 0.7907878259187994,
+      "cv_f1_std": 0.02140617476358153
+    },
+    "capitals": {
+      "feature_count": 3,
+      "cv_f1_mean": 0.7390574821835694,
+      "cv_f1_std": 0.01252975893179239
+    },
+    "words_symbols": {
+      "feature_count": 54,
+      "cv_f1_mean": 0.9207637543631069,
+      "cv_f1_std": 0.018274637869946254
+    },
+    "words_capitals": {
+      "feature_count": 51,
+      "cv_f1_mean": 0.9293593395679588,
+      "cv_f1_std": 0.01782130481007873
+    }
+  },
   "feature_columns": [
     "word_freq_make",
     "word_freq_address",
