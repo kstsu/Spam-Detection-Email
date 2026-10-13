@@ -1,4 +1,16 @@
-# Spam Detection Email
+cd "R:\SCHOOL\2026-2027\1st term\MachineLearning\Project\Spam-Detection-Email"
+
+$rows = Import-Csv ".\data\original\spam_all.csv"
+
+$columns = $rows[0].PSObject.Properties.Name |
+    Where-Object { $_ -ne "label" }
+
+$rows[0] |
+    Select-Object -Property $columns |
+    Export-Csv ".\sample_email_features.csv" -NoTypeInformation
+
+Get-Item ".\sample_email_features.csv" | Select-Object Name, Length
+Get-Content ".\sample_email_features.csv" -First 2# Spam Detection Email
 
 > **What does a machine learning model actually need to recognise spam: the words and symbols, or the style (CAPITAL LETTERS)?**
 
