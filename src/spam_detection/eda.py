@@ -64,7 +64,9 @@ def run_eda(output_dir: Path = PROCESSED_DATA_DIR / "eda") -> list[str]:
         "Several word and symbol features differ substantially by class, motivating content-plus-symbol inputs."
     )
 
-    correlation_columns = list(top_columns) + ["capital_run_length_total"]
+    correlation_columns = list(
+        dict.fromkeys([*top_columns, "capital_run_length_total"])
+    )
     plt.figure(figsize=(9, 7))
     sns.heatmap(data[correlation_columns].corr(), cmap="vlag", center=0)
     plt.title("Correlation among discriminative and capital features")
