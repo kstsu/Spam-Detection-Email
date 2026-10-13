@@ -43,6 +43,7 @@ def predict(features: pd.DataFrame) -> tuple[str, float | None]:
 st.set_page_config(page_title="Spam Detection Email", page_icon="✉️")
 st.title("Spam Detection Email")
 st.write("Classify a message using the saved traditional machine-learning pipeline.")
+st.caption("Model used: Random Forest")
 
 if not MODEL_PATH.exists():
     st.warning(
