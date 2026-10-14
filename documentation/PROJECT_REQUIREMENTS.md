@@ -1,6 +1,6 @@
 # Project requirements (course rules in checklist form)
 
-Source: *Final Group Project Requirements: Traditional Machine Learning Model and Deployable Application*. This is a working summary so humans and AI agents can check the rules quickly. If anything here conflicts with the original PDF or the instructor, the PDF and the instructor win.
+Source: *Final Group Project Requirements: Traditional Machine Learning Model and Deployable Application*. 
 
 ## Purpose
 

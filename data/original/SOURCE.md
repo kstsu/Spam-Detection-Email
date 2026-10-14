@@ -5,8 +5,8 @@
 | Dataset | Spambase |
 | Source | UCI Machine Learning Repository: https://archive.ics.uci.edu/dataset/94/spambase |
 | Creators | Mark Hopkins, Erik Reeber, George Forman, Jaap Suermondt (Hewlett-Packard Labs), 1999 |
-| License / permission | [PLACEHOLDER: confirm the license or permission terms shown on the UCI dataset page] |
-| Collection method | [PLACEHOLDER: confirm the exact collection description from the UCI dataset page] |
+| License / permission | Creative Commons Attribution 4.0 International (CC BY 4.0), as listed by the UCI Machine Learning Repository |
+| Collection method | Spam emails were collected from the postmaster and individuals who had filed spam. Non-spam emails came from filed work and personal emails. |
 | Unit of analysis | One email message |
 | Records | 4,601 emails (1,813 spam, 2,788 not spam) |
 | Features | 57 numeric (48 word frequencies, 6 character frequencies, 3 capital-letter-run measures) |

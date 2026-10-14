@@ -160,18 +160,18 @@ Both paths are validated (empty, wrong columns, negative or out-of-range values 
 
 ## Roadmap
 
-Dates depend on the course deadline (not stated in the requirements; **Due: [PLACEHOLDER]**).
+Course deadline: **October 15, 2026**.
 
 ### Short term: deliver the course project
 
-- [ ] **M0: Repository bootstrap.** Structure, README, `CLAUDE.md`, documentation stubs, environment
-- [ ] **M1: Problem and data definition** *(5 pts)*. Confirm the three algorithms, primary metric and its justification, dedupe policy; finish data dictionary and source/license note
-- [ ] **M2: Exploratory data analysis** *(25 pts)*. Data quality, duplicates and conflicting labels, distributions, feature-target relationships, correlations, class balance, outlier investigation (errors vs. legitimate extremes), at least 5 figures each with a written finding, and an EDA findings summary that drives later decisions
-- [ ] **M3: Preprocessing pipeline** *(10 pts)*. Leakage-safe scikit-learn pipeline, stratified 80/20 split, fixed random state, imbalance handling, reproducible end to end
-- [ ] **M4: Three-algorithm comparison** *(20 pts)*. Identical conditions, documented tuning, same metrics for all three, mean ± std across folds, feature-group analysis
-- [ ] **M5: Evaluation and model selection** *(15 pts)*. Validation vs. test clearly separated, one-time test evaluation, confusion matrix, error analysis, defensible choice; save the final pipeline to `models/`
-- [ ] **M6: Streamlit app and deployment** *(15 pts)*. Load the saved pipeline, validated inputs, probabilities, public URL, tests with valid/invalid/boundary inputs, screenshots
-- [ ] **M7: Paper, documentation and dataset package** *(10 pts)*. IMRaD paper in IEEE format (DOCX + PDF, 6 to 10 pages), IEEE citations, technical documentation, contribution record, signed declaration
+- [x] **M0: Repository bootstrap.** Structure, README, documentation, source package, environment
+- [x] **M1: Problem and data definition** *(5 pts)*. Confirm the three algorithms, primary metric and its justification, dedupe policy; finish data dictionary and source/license note
+- [x] **M2: Exploratory data analysis** *(25 pts)*. Data quality, duplicates and conflicting labels, distributions, feature-target relationships, correlations, class balance, outlier investigation (errors vs. legitimate extremes), at least 5 figures each with a written finding, and an EDA findings summary that drives later decisions
+- [x] **M3: Preprocessing pipeline** *(10 pts)*. Leakage-safe scikit-learn pipeline, stratified 80/20 split, fixed random state, imbalance handling, reproducible end to end
+- [x] **M4: Three-algorithm comparison** *(20 pts)*. Identical conditions, documented tuning, same metrics for all three, mean ± std across folds, feature-group analysis
+- [x] **M5: Evaluation and model selection** *(15 pts)*. Validation vs. test clearly separated, one-time test evaluation, confusion matrix, error analysis, defensible choice; save the final pipeline to `models/`
+- [x] **M6: Streamlit app and deployment** *(15 pts)*. Load the saved pipeline, validated inputs, probabilities, public URL, tests with valid, invalid and boundary inputs
+- [ ] **M7: Paper, documentation and dataset package** *(10 pts)*. Copy the reviewed final IMRaD paper, signed declaration and screenshots into the submission package
 - [ ] **M8: Final QA and submission.** Walk the checklist in `documentation/PROJECT_REQUIREMENTS.md`, test in a clean environment, build the ZIP, confirm the deployed URL works
 
 ### Long term: beyond the course
@@ -188,7 +188,7 @@ Dates depend on the course deadline (not stated in the requirements; **Due: [PLA
 
 | # | Deliverable | Location |
 |---|---|---|
-| 1 | Deployable application (URL + local) | `app/` and the deployed URL: **[PLACEHOLDER]** |
+| 1 | Deployable application (URL + local) | `app/` and the deployed URL: **https://spamdetection-emailb.streamlit.app/** |
 | 2 | Source code, saved model, requirements | `src/`, `notebooks/`, `models/`, `requirements.txt`; repo link + ZIP |
 | 3 | Technical documentation | this README, `documentation/` (PDF or DOCX for submission) |
 | 4 | Dataset package | `data/original/`, `data/processed/`, `documentation/DATA_DICTIONARY.md`, `data/original/SOURCE.md` |
@@ -270,8 +270,7 @@ Troubleshooting: if `streamlit` or `pytest` is not found, activate the virtual e
 
 | Member | Role / responsibility | Notes |
 |---|---|---|
-| [PLACEHOLDER] | [PLACEHOLDER] | |
-| [PLACEHOLDER] | [PLACEHOLDER] | |
+| Individual project | Project owner; responsible for the complete implementation | See `documentation/CONTRIBUTIONS.md` |
 
 The full contribution record, confirmed by all members, lives in `documentation/CONTRIBUTIONS.md`.
 
@@ -291,4 +290,4 @@ The full contribution record, confirmed by all members, lives in `documentation/
 - **Dataset:** Hopkins, M., Reeber, E., Forman, G., Suermondt, J. (1999). *Spambase*. UCI Machine Learning Repository.
 - **Course:** Final Group Project Requirements, Traditional Machine Learning Model and Deployable Application.
 - **Ownership and authorship:** governed by the signed declaration and university policy.
-- **License:** [PLACEHOLDER]. Confirm with the group and the instructor before adding a `LICENSE` file.
+- **License:** No separate repository source-code license is declared. Ownership remains with the project author. The dataset is provided under the UCI-listed CC BY 4.0 terms described in `data/original/SOURCE.md`.

@@ -4,12 +4,12 @@
 
 | Item | Value |
 |---|---|
-| Group | [PLACEHOLDER] |
-| Course | [PLACEHOLDER] |
-| Instructor | [PLACEHOLDER] |
-| Deadline | [PLACEHOLDER] |
+| Group | IdunnoSOLOenthusiast |
+| Course | Introduction To Machine Learning |
+| Instructor | Dr. Armida P. Salazar |
+| Deadline | October 15, 2026 |
 | Repository | https://github.com/kstsu/Spam-Detection-Email |
-| Deployed application | [PLACEHOLDER] |
+| Deployed application | https://spamdetection-emailb.streamlit.app/ |
 
 ## 1. Problem and Intended Use
 
@@ -25,7 +25,7 @@ The dataset contains 4,601 email records, 57 numeric features, and one target la
 - 6 `char_freq_` columns: percentages of characters matching `;`, `(`, `[`, `!`, `$`, and `#`.
 - 3 `capital_run_length_` columns: average, longest, and total consecutive-capital run lengths.
 
-The source files are preserved in `data/original/`. Their provenance and remaining source information are recorded in `data/original/SOURCE.md`. License confirmation remains `[PLACEHOLDER]` until the group confirms the applicable UCI terms.
+The source files are preserved in `data/original/`. The UCI dataset page identifies the dataset as available under the Creative Commons Attribution 4.0 International (CC BY 4.0) license. According to the UCI description, spam was collected from a postmaster and people who had reported spam, while non-spam was collected from filed work and personal email. The repository source note records the provenance and limitations.
 
 ### Data quality actions
 
@@ -131,7 +131,22 @@ python -m spam_detection.final_evaluation
 python -m pytest -q
 ```
 
-The exact dependency versions should be pinned after the final clean-environment run: `[PLACEHOLDER]`.
+The local environment used for the final verification reported these package versions:
+
+```text
+pandas==3.0.5
+numpy==2.5.2
+scikit-learn==1.9.0
+matplotlib==3.11.2
+seaborn==0.13.2
+joblib==1.6.0
+streamlit==1.63.0
+jupyterlab==4.6.4
+pytest==9.1.1
+ruff==0.16.10
+```
+
+The submitted `requirements.txt` should use these exact versions only after the clean-environment installation and application test have been completed.
 
 ## 9. Limitations and Responsible Use
 
@@ -140,7 +155,7 @@ The exact dependency versions should be pinned after the final clean-environment
 - The word vocabulary is fixed and cannot discover new spam terms.
 - The text-to-feature app path only approximates the original feature extraction.
 - The dataset source, mailbox composition, and historical collection process may limit generalization.
-- A public deployment URL and deployment configuration are `[PLACEHOLDER]`.
+
 
 ## 10. Troubleshooting
 
@@ -150,4 +165,4 @@ The exact dependency versions should be pinned after the final clean-environment
 | Model file is missing | Run `python -m spam_detection.train` with `PYTHONPATH=src` |
 | Import error for `spam_detection` | Set `$env:PYTHONPATH = "src"` from the repository root |
 | CSV rejected | Confirm all 57 feature columns exist, are numeric, non-negative, and frequencies do not exceed 100 |
-| Deployment fails | Confirm the deployment host uses the repository root and installs `requirements.txt`; deployment URL: `[PLACEHOLDER]` |
+| Deployment fails | Confirm the deployment host uses the repository root and installs `requirements.txt`; deployed application: https://spamdetection-emailb.streamlit.app/ |

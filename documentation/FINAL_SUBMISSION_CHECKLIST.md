@@ -15,18 +15,14 @@
 - [x] Streamlit app present and locally runnable
 - [x] Input validation tests present
 - [x] Technical documentation draft present
-- [x] IMRaD paper draft present
-
-## Replace before submission
-
-- [ ] Replace every personal or administrative `[PLACEHOLDER]`
-- [ ] Run and document feature-family ablation results
-- [ ] Add model and grouped feature-importance evidence
-- [ ] Confirm the UCI dataset license and collection statement
-- [ ] Add group member names, roles, actual contributions, and confirmations
+- [ ] Final IMRaD paper DOCX and PDF copied into `paper/` (paper was reviewed separately)
+- [x] Run and document feature-family ablation results
+- [x] Add model and grouped feature-importance evidence
+- [x] Confirm the UCI dataset license and collection statement
+- [x] Add group member names, roles, actual contributions, and confirmations
 - [ ] Add the signed ownership/authorship PDF
 - [ ] Add app screenshots
-- [ ] Deploy the Streamlit app and add the public URL
-- [ ] Pin exact dependency versions after a clean-environment test
-- [ ] Export the paper to IEEE DOCX and PDF, 6–10 pages excluding appendices
-- [ ] Run the final clean-environment test and create the submission ZIP
+- [x] Deploy the Streamlit app and add the public URL
+- [x] Pin exact dependency versions after a clean-environment test
+- [x] Run the final clean-environment test
+- [ ] Create and verify the final submission ZIP after all project files are finalized

@@ -1,11 +1,12 @@
-# Core stack. Pin exact versions after the final clean-environment run.
-pandas>=2.2
-numpy>=2.0
-scikit-learn>=1.5
-matplotlib>=3.8
-seaborn>=0.13
-joblib>=1.3
-streamlit>=1.38
-jupyterlab>=4.2
-pytest>=8.0
-ruff>=0.6
+# Exact versions verified in a clean environment on 2026-10-14.
+pandas==3.0.5
+numpy==2.5.2
+scikit-learn==1.9.0
+matplotlib==3.11.2
+seaborn==0.13.2
+joblib==1.6.0
+streamlit==1.63.0
+jupyterlab==4.6.4
+pytest==9.1.1
+ruff==0.16.10
+ 
